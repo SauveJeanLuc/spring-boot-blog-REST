@@ -12,6 +12,7 @@ import java.util.Optional;
 
 @Component
 public interface PostRepository extends JpaRepository<Post, Long>{
+    @RestResource(rel="contains-title", path="containsTitle")
     List<Post> findByTitleContaining(String title);
 }
 //public class PostRepository {
