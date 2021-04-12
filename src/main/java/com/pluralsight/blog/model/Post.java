@@ -17,6 +17,8 @@ public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Author author;
     private String title;
     @Column(length=1000000)
     @Lob
@@ -70,6 +72,14 @@ public class Post {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
     }
 
     @Override
