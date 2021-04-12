@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @Component
 public interface PostRepository extends JpaRepository<Post, Long>{
-
+    List<Post> findByTitleContaining(String title);
 }
 //public class PostRepository {
 //    public List<Post> findAll() {
