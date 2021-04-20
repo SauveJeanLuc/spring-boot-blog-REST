@@ -17,6 +17,8 @@ public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Version
+    private Long version;
     @ManyToOne(fetch = FetchType.EAGER)
     private Author author;
     private String title;
