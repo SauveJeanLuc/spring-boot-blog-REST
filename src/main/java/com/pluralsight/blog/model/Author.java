@@ -18,7 +18,9 @@ public class Author {
     private Long id;
     private String firstname;
     private String lastname;
+    @JsonIgnore // For Hiding the property
     private String username;
+    @JsonIgnore // For Hiding the property
     private String password;
     @OneToMany
     private List<Post> posts;
