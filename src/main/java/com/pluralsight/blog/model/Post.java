@@ -21,6 +21,8 @@ public class Post {
     private Long version;
     @ManyToOne(fetch = FetchType.EAGER)
     private Author author;
+    @NotNull
+    @Size(min = 4, max = 100)
     private String title;
     @Column(length=1000000)
     @Lob
